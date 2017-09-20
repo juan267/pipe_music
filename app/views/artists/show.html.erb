@@ -1,0 +1,29 @@
+<section id="artist">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8" id="list-album">
+					<!-- Aqui va los albunes del artista -->
+					<h1><%= @artist.name %></h1>
+					<hr>
+					<div>
+						<span class="h4">Albums </span><sup class="badge badge-primary">7</sup>
+					</div>
+					<div class="row">
+						<div class="col-md-3 col-sm-6" id="space-box">
+							<div class="card border border-dark" id="card" >
+								<img class="card-img-top" src="images/album_killers_1.jpg" alt="Card image cap">
+								<div class="card-body text-center" style="background-color: #efefef">
+									<h5 class="card-title">Day & Age</h5>
+									<a href="#" class="btn btn-primary btn-block">Ver más</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<!-- Aqui va la foto del artista -->
+					<img src="<%= @artist.image_url %>" class="img-thumbnail" alt="imagen del grupo The killers">
+				</div>
+			</div>
+		</div>
+</section>
