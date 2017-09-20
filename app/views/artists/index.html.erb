@@ -1,0 +1,21 @@
+<section id="artist_list">
+	<div class="container">
+		<div class="row">
+
+			<% @artists.each do |artist| %>
+
+				<div class="col-md-3 col-sm-6" id="space-box">
+					<div class="card border border-dark" id="card" >
+						<img class="card-img-top" src="<%= artist.image_url %>" alt="Card image cap">
+						<div class="card-body text-center" style="background-color: #efefef">
+							<h4 class="card-title"><%= artist.name %></h4>
+							<a href="/artists/<%= artist.id %>" class="btn btn-primary btn-block">Ver más</a>
+						</div>
+					</div>
+				</div>
+
+			<% end %>
+
+		</div>
+	</div>
+</section>
