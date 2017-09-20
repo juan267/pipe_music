@@ -6,18 +6,20 @@
 					<h1><%= @artist.name %></h1>
 					<hr>
 					<div>
-						<span class="h4">Albums </span><sup class="badge badge-primary">7</sup>
+						<span class="h4">Albums </span><sup class="badge badge-primary"><%= @artist.albums.count %></sup>
 					</div>
 					<div class="row">
-						<div class="col-md-3 col-sm-6" id="space-box">
-							<div class="card border border-dark" id="card" >
-								<img class="card-img-top" src="images/album_killers_1.jpg" alt="Card image cap">
-								<div class="card-body text-center" style="background-color: #efefef">
-									<h5 class="card-title">Day & Age</h5>
-									<a href="#" class="btn btn-primary btn-block">Ver más</a>
+						<% @artist.albums.each do |album| %>
+							<div class="col-md-3 col-sm-6" id="space-box">
+								<div class="card border border-dark" id="card" >
+									<img class="card-img-top" src="<%= album.image_url %>" alt="Card image cap">
+									<div class="card-body text-center" style="background-color: #efefef">
+										<h5 class="card-title"><%= album.name %></h5>
+										<a href="#" class="btn btn-primary btn-block">Ver más</a>
+									</div>
 								</div>
 							</div>
-						</div>
+						<% end %>
 					</div>
 				</div>
 				<div class="col-md-3">
